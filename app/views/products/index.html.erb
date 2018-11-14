@@ -1,0 +1,15 @@
+<h1>Products</h1>
+<p><%= @products.where(:sold => false).count %> total product(s)</p>
+
+<div class="row">
+  <% @products.each do |product| %>
+    <% if !product.sold %>
+      <div class="column">
+        <%= image_tag(product.image.url, :size => "315x180") if product.image.exists? %>
+        <p><%= link_to "#{product.name}", product_path(product) %></p>
+        <p><%= product.size %></p>
+        <p><%= number_to_currency(product.price, :unit => "$") %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>

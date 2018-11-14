@@ -1,0 +1,19 @@
+<h1><%= @product.name %></h1>
+<div class="">
+  <%= image_tag(@product.image.url, :size => "640x440") if @product.image.exists? %>
+</div>
+
+<h2><%= number_to_currency(@product.price, :unit => "$") %></h2>
+<h3><%= link_to "#{@product.user.name}", user_path(@product.user) %></h3>
+
+<div class="">
+  <strong><%= @product.size %></strong>
+  <strong><%= @product.condition %></strong>
+</div>
+
+<br>
+
+<div class="">
+  <label for="">Product Details</label>
+  <p><%= @product.description %></p>
+</div>
