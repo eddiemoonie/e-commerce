@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ECommerce</title>
+    <title>Marketplace</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,25 @@
   </head>
 
   <body>
+
+    <header class="navbar navbar-inverse">
+      <div class="navbar-class">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <% if current_user %>
+              <li><%= link_to "Marketplace", products_path %></li>
+              <li><%= link_to "Sell", new_product_path %></li>
+              <li class="profile"><%= link_to "Dashboard", user_path(current_user) %></li>
+              <li class="profile"><%= link_to "Log Out", logout_path, method: :delete%></li>
+            <% else %>
+              <li class="profile"><%= link_to "Log In", login_path %></li>
+              <li class="profile"><%= link_to "Sign Up", new_user_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </header>
+
     <%= yield %>
   </body>
 </html>
