@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(version: 2018_11_14_190347) do
     t.datetime "image_updated_at"
     t.text "description"
     t.decimal "price"
-    t.string "condition"
-    t.decimal "size"
     t.boolean "sold", default: false
     t.integer "user_id"
     t.datetime "created_at", null: false

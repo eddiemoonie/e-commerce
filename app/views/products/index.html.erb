@@ -7,7 +7,6 @@
       <div class="column">
         <%= image_tag(product.image.url, :size => "315x180") if product.image.exists? %>
         <p><%= link_to "#{product.name}", product_path(product) %></p>
-        <p><%= product.size %></p>
         <p><%= number_to_currency(product.price, :unit => "$") %></p>
       </div>
     <% end %>

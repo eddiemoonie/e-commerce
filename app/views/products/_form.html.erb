@@ -19,18 +19,6 @@
   </div>
 
   <div class="">
-    <%= f.label :size %>
-    <br>
-    <%= f.select :size, options_for_select((7.0..15.0).step(0.5)), :prompt => "Select" %>
-  </div>
-
-  <div class="">
-    <%= f.label :condition %>
-    <br>
-    <%= f.select :condition, ["Brand New", "Pre-Owned"], :prompt => "Select" %>
-  </div>
-
-  <div class="">
     <%= f.label :price %>
     <br>
     <%= f.text_field :price %>

@@ -6,11 +6,6 @@
 <h2><%= number_to_currency(@product.price, :unit => "$") %></h2>
 <h3><%= link_to "#{@product.user.name}", user_path(@product.user) %></h3>
 
-<div class="">
-  <strong><%= @product.size %></strong>
-  <strong><%= @product.condition %></strong>
-</div>
-
 <br>
 
 <div class="">
