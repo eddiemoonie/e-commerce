@@ -7,19 +7,30 @@
   </div>
 
   <div class="">
-    <%= f.label :password %>
-    <br>
-    <%= f.password_field :password %>
-  </div>
-
-  <div class="">
     <%= f.label :email %>
     <br>
     <%= f.text_field :email %>
   </div>
 
   <div class="">
-    <%= f.submit %>
+    <%= f.label :password %>
+    <br>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="">
+    <%= f.label :passowrd_confirmation %>
+    <br>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class="">
+    <%= f.label :admin %>
+    <%= f.check_box :admin %>
+  </div>
+
+  <div class="">
+    <%= f.submit "Create Account" %>
   </div>
 
 <% end %>
